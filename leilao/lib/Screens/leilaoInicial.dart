@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:leilao/Screens/entrarComoComprador.dart';
+import 'package:leilao/Screens/entrarComoVendedor.dart';
 import 'package:leilao/Screens/registrar.dart';
 
 class LeilaoInicial extends StatefulWidget {
@@ -13,13 +15,13 @@ class _LeilaoInicialState extends State<LeilaoInicial> {
   }
 
   void _openLoginComprador() {
-    Navigator.push(
-        context, MaterialPageRoute(builder: ((context) => Registrar())));
+    Navigator.push(context,
+        MaterialPageRoute(builder: ((context) => EntrarComoComprador())));
   }
 
   void _openLoginVendedor() {
-    Navigator.push(
-        context, MaterialPageRoute(builder: ((context) => Registrar())));
+    Navigator.push(context,
+        MaterialPageRoute(builder: ((context) => EntrarComoVendedor())));
   }
 
   @override
@@ -60,7 +62,7 @@ class _LeilaoInicialState extends State<LeilaoInicial> {
             Padding(
               padding: EdgeInsets.only(bottom: 10),
               child: TextButton(
-                onPressed: () {},
+                onPressed: _openLoginComprador,
                 child: const Text(
                   'Entrar como comprador',
                   style: TextStyle(
@@ -80,7 +82,7 @@ class _LeilaoInicialState extends State<LeilaoInicial> {
             Padding(
               padding: EdgeInsets.only(bottom: 20),
               child: TextButton(
-                onPressed: () {},
+                onPressed: _openLoginVendedor,
                 child: const Text(
                   'Entrar como vendedor',
                   style: TextStyle(
