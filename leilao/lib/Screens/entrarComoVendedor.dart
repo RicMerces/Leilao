@@ -34,7 +34,7 @@ class _EntrarComoVendedorState extends State<EntrarComoVendedor> {
                 const Padding(
                   padding: EdgeInsets.only(top: 30, bottom: 30),
                   child: Text(
-                    'Login',
+                    'Vendedor',
                     style: TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 23,
